@@ -86,6 +86,8 @@ body {
   pointer-events: initial;
   position: absolute;
   width: 80%;
+
+  transition: opacity .3s
 }
 
 .control p {

@@ -195,7 +195,17 @@ for (let element of buttonElements) {
 controlElement.onclick = () => {
   if (canStartRound) {
     callRound()
-
+    controlElement.classList.remove('hover')
     canStartRound = false
   }
+}
+
+controlElement.onmouseenter = () => {
+  if(canStartRound === true) {
+    controlElement.classList.add('hover')
+  }
+}
+
+controlElement.onmouseleave = () => {
+  controlElement.classList.remove('hover')
 }
