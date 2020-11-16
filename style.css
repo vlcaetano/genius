@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  background-color: ghostwhite;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-left {
+  background-color: green;
+  border-radius: 100% 5px 5px;
+}
+
+.top-right {
+  background-color: red;
+  border-radius: 5px 100% 5px 5px;
+}
+
+.bottom-left {
+  background-color: yellow;
+  border-radius: 5px 5px 5px 100%;
+}
+
+.bottom-right {
+  background-color: blue;
+  border-radius: 5px 5px 100% 5px;
+}
+
+.game {
+  align-items: center;
+  background-color: #000;
+  border-radius: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40vw;
+  justify-content: space-around;
+  padding: 1.5%;
+  position: relative;
+  width: 40vw;
+}
+
+.genius-button {
+  height: 45%;
+  opacity: 0.25;
+  transition: opacity 0.75s;
+  width: 45%;
+}
+
+.control-container {
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  background-color: #000;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 25%;
+  margin: 10px 0;
+  position: relative;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control .background {
+  background-color: green;
+  border-radius: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 80%;
+  pointer-events: initial;
+  position: absolute;
+  width: 80%;
+}
+
+.control p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  z-index: 1;
+
+  pointer-events: none;
+  position: relative;
+  text-align: center;
+}
+
+.hover {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}
+
+.scores {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.scores div {
+  display: flex;
+  justify-content: center;
+  margin: 0 50px;
+}
+
+.score,
+.high-score {
+  margin-left: 5px;
+}
+
+@media (max-width: 1400px) {
+  .control p {
+    font-size: 1rem;
+  }
+  .scores {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .control p {
+    font-size: 1rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .game {
+    height: 60vw;
+    padding: 1.5%;
+    width: 60vw;
+  }
+}
